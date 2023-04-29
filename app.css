@@ -1,0 +1,17 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --clr-1: #111827;
+  --clr-2: green;
+  --clr-3: white;
+  --clr-4: orange;
+  --clr-5: purple;
+}
+
+/* body{
+  height: 100vh;
+} */

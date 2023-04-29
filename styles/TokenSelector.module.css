@@ -1,0 +1,120 @@
+.wrapper {
+  background: linear-gradient(315deg, #36096d 40%, #111827 74%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  /* border: 1px solid linear-gradient(to right, #fff 0, orange 33%); */
+  border-radius: 8px;
+  margin-top: 10px;
+  height: 70px;
+  position: relative;
+}
+
+.tokenContainer {
+  position: absolute;
+  left: 20px;
+  transition: 3s ease-in-out;
+}
+
+.selectedToken {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: 2s ease-in-out;
+}
+
+.tokenList {
+  display: flex;
+  flex-direction: column;
+  max-height: 80px;
+  overflow-y: auto;
+  margin-top: 3px;
+  border-top: 2px solid #0047ab;
+  font-size: 14px;
+  background-color: #111827;
+  transition: 1s ease-in-out;
+}
+
+.token {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  margin-bottom: 3px;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.token img {
+  width: 25px;
+  height: 25px;
+  padding-right: 20px;
+}
+
+.selectedTokenDisplay {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.selectedTokenDisplayWrapper {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  position: relative;
+}
+
+.selectedTokenSymbol img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 15px 15px;
+  }
+
+  .token img {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+  }
+
+  .selectedTokenDisplayWrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tokenList{
+    max-height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tokenList {
+    font-size: 12px;
+  }
+
+  .token {
+    padding: 3px 5px;
+  }
+
+  .token img {
+    width: 15px;
+    height: 15px;
+    padding-right: 5px;
+  }
+
+  .selectedTokenDisplayWrapper {
+    width: 30px;
+    height: 30px;
+  }
+}
