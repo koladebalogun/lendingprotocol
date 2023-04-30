@@ -7,17 +7,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  background: linear-gradient(315deg, #1f283c 40%, #36096d 74%);
   border-radius: 4px;
-  padding: 20px;
+  padding: 10px 20px;
   width: 90%;
-  height: 100%;
+  max-height: 220px;
   overflow: auto;
-  margin-bottom: 2rem;
   color: #fff;
   margin: 0 auto;
-  /* position: relative; */
-  /* z-index: -1; */
+  position: absolute;
 }
 
 .header {
@@ -45,7 +43,6 @@
 .price {
   color: #0fb30f;
 }
-
 
 @media (max-width: 768px) {
   .container {

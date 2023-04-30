@@ -77,7 +77,6 @@
   height: 100%;
 }
 
-/* Responsive styles */
 
 @media (max-width: 768px) {
   .wrapper {

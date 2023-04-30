@@ -1,0 +1,56 @@
+.boxWrapper {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.boxCard {
+  position: relative;
+  top: -12px;
+  width: 500px;
+  height: 400px;
+  aspect-ratio: 1 / 1.5;
+  background: var(--clr-1);
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.boxCard::before,
+.boxCard::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  border-radius: inherit;
+  /* animation: rotation 20s linear infinite; */
+}
+
+.boxCard::after {
+  filter: blur(3.5rem);
+}
+
+/* @keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+} */
+
+@media (max-width: 768px) {
+  .boxCard {
+    width: 300px;
+    height: 320px;
+    margin: 0 auto;
+  }
+}

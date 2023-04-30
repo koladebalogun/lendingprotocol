@@ -1,36 +1,19 @@
-
-
-.modal {
-  position: absolute;
-  width: 80%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 800px;
-  height: 500px;
-  background-color: #000;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  border: 2px solid #fff;
-  /* justify-content: center;
-   */
-  /* align-items: center; */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+.tokenDetailsContainer {
+  margin-left: 20px;
+  width: 600px;
+  position: relative;
 }
 
 .closeIcon {
   position: absolute;
-  right: -5px;
+  right: -15px;
   top: -13px;
   font-size: 34px;
   cursor: pointer;
 }
 
 .selectedTokens {
-  padding: 50px 50px;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +23,8 @@
 .selectedTokensImg {
   width: 70px;
   height: 70px;
+  border: 2px solid #fff;
+  border-radius: 100px;
 }
 
 .selectedTokensImg img {
@@ -47,26 +32,26 @@
   height: 100%;
 }
 
-.hypen{
-    height: 4px;
-    width: 30px;
-    background: #fff;
+.hypen {
+  height: 4px;
+  width: 30px;
+  background: #fff;
 }
 
-.divider {
+.displayDivider {
   background: linear-gradient(to right, #fff 0, orange 33%);
   height: 2px;
-  margin: 10px 0;
+  margin: 30px 0 10px 0;
   border-radius: 3px;
   width: 100%;
 }
 
-
 @media (max-width: 768px) {
-  .modal {
-    width: 90%;
-    height: auto;
+  .tokenDetailsContainer {
+    width: 300px;
+    height: 320px;
     padding: 10px;
+    margin: 0 auto;
   }
 
   .selectedTokens {
@@ -83,8 +68,8 @@
     height: 3px;
     width: 20px;
   }
-  
-  .divider{
+
+  .divider {
     margin-top: 40px;
   }
 }

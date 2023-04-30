@@ -76,8 +76,6 @@ export const WalletProvider = ({ children }) => {
     } else {
       console.log("No accounts found");
     }
-
-    console.log({ accounts });
   };
 
   useEffect(() => {

@@ -5,12 +5,10 @@ import { WalletContext } from "../context/WalletContext";
 
 const WalletButton = () => {
   const { connectWallet, currentAccount, disconnect } = useContext(WalletContext);
-
-  console.log(currentAccount);
   return (
     <button
       onClick={() => {
-        connectWallet;
+        connectWallet();
       }}
       className={styles.walletButton}
     >
