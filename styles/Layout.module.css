@@ -1,0 +1,27 @@
+.navWrapper{
+    padding:10px 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+}
+
+.divider {
+  background: linear-gradient(to right, #fff 0, orange 33%);
+  height: 2px;
+  margin: 2px 0;
+  border-radius: 3px;
+  width: 100%;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .nav h3 {
+    padding: 10px;
+  }
+}

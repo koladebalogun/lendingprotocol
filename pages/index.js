@@ -15,8 +15,29 @@ export default function Home() {
   const { currentAccount, setSelectedBaseToken, selectedBaseToken, selectedQuoteToken, setSelectedQuoteToken, tokens,
   } = useContext(WalletContext);
   const tl = gsap.timeline();
+  const tl2 = gsap.timeline();
   const ref = useRef(null);
   const ref2 = useRef(null);
+  const headTitle = useRef(null);
+  const subTitle = useRef(null);
+
+  useEffect(() => {
+    tl2.to(headTitle.current, 1.7, {
+      y: 20,
+      ease: "power1.out",
+      opacity:1
+    })
+    .to(subTitle.current, 1,{
+      y: 15,
+      ease: "power1.out",
+      opacity:1
+    })
+    .to(ref.current, 1,{
+      y: -5,
+      ease: "power1.out",
+      opacity:1
+    })
+  },[])
 
   useEffect(() => {
     console.log(window.innerWidth);
@@ -54,17 +75,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <header className={styles.header}>
-          <h3>Logo</h3>
-          <WalletButton />
-        </header>
-
         <div className={styles.exchangeContainer}>
-          <h1 className={styles.headTitle}>Pair your tokens</h1>
-          <p className={styles.subTitle}>Compare your tokens in seconds</p>
+          <h1 className={styles.headTitle} ref={headTitle}>Pair your tokens</h1>
+          <p className={styles.subTitle} ref={subTitle}>Compare your tokens in seconds</p>
 
           <div className={styles.boxWrapper}>
-            <div ref={ref}>
+            <div ref={ref} className={styles.box}>
               <BoxCard>
                 {!currentAccount ? (
                   <Loader title="Please connect your wallet" />
