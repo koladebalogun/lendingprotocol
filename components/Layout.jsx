@@ -11,12 +11,12 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     tl.to(nav.current, 1.3, {
-      y: 10,
+      y: 3,
       ease: "power1.out",
       opacity:1
     })
     .to(divider.current, 1,{
-      y: 5,
+      y: 2,
       ease: "power1.out",
       opacity:1
     })

@@ -2,6 +2,7 @@
   margin-left: 20px;
   width: 600px;
   position: relative;
+  top: -15px;
 }
 
 .closeIcon {
@@ -13,7 +14,7 @@
 }
 
 .selectedTokens {
-  padding: 20px 50px;
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
